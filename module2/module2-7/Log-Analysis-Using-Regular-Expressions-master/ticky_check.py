@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 import re
-import csv
 import operator
-import sys
+
 
 per_user = {}
 errors = {}
