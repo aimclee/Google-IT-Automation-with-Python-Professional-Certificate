@@ -12,6 +12,9 @@ Avocado contains large amount of oleic acid, a type of monounsaturated fat that 
 '''
 
 def data(url, description_dir):
+  """This function will return a list of dictionaries with all the details like name, weight, description, image_name.
+  It will change the weight to integer format.
+  """
   json_dict={}
   for txt_file in os.listdir(description_dir):
     json_dict.clear()
