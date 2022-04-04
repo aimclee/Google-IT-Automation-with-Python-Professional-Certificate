@@ -15,9 +15,9 @@ for txt_file in os.listdir('./supplier-data/descriptions/'):
   json_dict={}
   with open(txt_file) as txt_file:
     txt_file.readlines()
-    json_dict['name'] = txt_file[0]
-    json_dict['weight'] = int(txt_file[1].split('lbs'))
+    json_dict['name'] = txt_file[0].strip('\n')
+    json_dict['weight'] = int(txt_file[1].strip('\n').split('lbs'))
     json_dict['description'] = txt_file[2]
-    json_dict['image_name'] = txt_file.split('.txt')+'.jpeg'
-  fruit_dict = json.dumps(json_dict)
+    json_dict['image_name'] = txt_file.strip('.txt')+'.jpeg'
+  response = requests.port(url, json=json_dict)
 
