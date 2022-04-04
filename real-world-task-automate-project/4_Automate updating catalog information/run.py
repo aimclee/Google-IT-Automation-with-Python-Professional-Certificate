@@ -28,7 +28,8 @@ def data(url, description_dir):
     response = requests.post(url, json=json_dict)
   return 0
 
-
+# 해당 모듈이 임포트된 경우가 아니라 인터프리터에서 실행된 경우에만 아래 코드를 실행시킨다.
+# https://medium.com/@chullino/if-name-main-%EC%9D%80-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%A0%EA%B9%8C-bc48cba7f720
 if __name__ == "__main__":
   url = 'http://localhost/fruits/'
   user = os.getenv('USER')
